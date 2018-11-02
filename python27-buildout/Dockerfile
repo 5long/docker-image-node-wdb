@@ -1,4 +1,7 @@
 FROM python:2.7-slim
 
-RUN apk add -U --no-cache docker
+RUN apt update && apt install -y --no-install-recommends curl
+ENV CHANNEL=stable
+RUN curl https://get.docker.com | bash
+RUN rm -rf /var/lib/apt/lists/*
 RUN pip install zc.buildout==2.12.2
