@@ -4,4 +4,4 @@ RUN apt update && apt install -y --no-install-recommends curl
 ENV CHANNEL=stable
 RUN curl https://get.docker.com | bash
 RUN rm -rf /var/lib/apt/lists/*
-RUN pip install zc.buildout==2.12.2
+RUN pip install zc.buildout==2.11.5
