@@ -5,4 +5,5 @@ ENV CHANNEL=stable
 RUN curl https://get.docker.com | bash
 RUN rm -rf /var/lib/apt/lists/*
 RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
-RUN config.toml /root/.config/pypoetry/
+RUN ln -s /root/.poetry/bin/poetry /usr/local/bin/poetry
+COPY config.toml /root/.config/pypoetry/
