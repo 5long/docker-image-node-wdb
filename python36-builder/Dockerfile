@@ -1,6 +1,6 @@
 FROM python:3.6-slim
 
-RUN apt update && apt install -y --no-install-recommends curl build-essential git git-lfs
+RUN apt update && apt install -y --no-install-recommends curl build-essential
 ENV CHANNEL=stable
 RUN curl https://get.docker.com | bash
 RUN rm -rf /var/lib/apt/lists/*
